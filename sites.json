@@ -1,11 +1,33 @@
 [
-    {"site":"proxyscrape.com",
+
+    {"site":"https://proxyscrape.com",
     "url":"https://api.proxyscrape.com/v3/free-proxy-list/get?request=displayproxies&proxy_format=protocolipport&format=json",
     "api":true,
     "proxies":["proxies"],
-    "l_proxy":["proxy"],
+    "ip":["ip"],
+    "port":["port"],
     "protocol":["protocol"],
     "country":["ip_data","countryCode"]
+    },
+    {"site":"https://geonode.com",
+    "url":"https://proxylist.geonode.com/api/proxy-list?limit=500&page=1&sort_by=lastChecked&sort_type=desc",
+    "api":true,
+    "proxies":["data"],
+    "ip":["ip"],
+    "port":["port"],
+    "protocol":["protocols",0],
+    "country":["country"]
+    },
+    {"site":"https://free-proxy-list.net",
+    "url":"https://free-proxy-list.net/",
+    "api":false,
+    "proxies":"table.table > tbody",
+    "ip":"td:nth-of-type(1)",
+    "port":"td:nth-of-type(2)",
+    "protocol":"none",
+    "country":"td:nth-of-type(4)"
     }
+
+    
 
 ]
